@@ -22,14 +22,13 @@
 class max7219_pvn
 {
 private:
-    uint8_t CS_PIN;
+    uint8_t cs_pin;
     uint8_t activeDigits;
 public:
-    max7219_pvn(uint8_t cspin);
-    max7219_pvn(uint8_t cspin, uint8_t );
+    max7219_pvn();
     ~max7219_pvn();
     void spiTransmit(uint8_t addr, uint8_t data);
-    void init();
+    void init(uint8_t cs_pin);
 };
 
 
