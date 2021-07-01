@@ -1,5 +1,5 @@
-#ifndef MAX7219_PVN_H
-#define MAX7219_PVN_H
+#ifndef MAX7219_H
+#define MAX7219_H
 
 #include <Arduino.h>
 #include <SPI.h>
@@ -19,14 +19,14 @@
 #define MAX7219_DIG_DP 0b10000000
 
 
-class max7219_pvn
+class max7219
 {
 private:
     uint8_t cs_pin;
     uint8_t activeDigits;
 public:
-    max7219_pvn();
-    ~max7219_pvn();
+    max7219();
+    ~max7219();
     void spiTransmit(uint8_t addr, uint8_t data);
     void init(uint8_t cs_pin);
 };

@@ -1,10 +1,10 @@
 #include <max7219.h>
 
-max7219_pvn::~max7219_pvn()
+max7219::~max7219()
 {
 }
 
-void max7219_pvn::spiTransmit(uint8_t addr, uint8_t data)
+void max7219::spiTransmit(uint8_t addr, uint8_t data)
 {
   SPI.beginTransaction(SPISettings(MAX7219_SPIMAXSPEED,MSBFIRST,SPI_MODE0));
   digitalWrite(cs_pin,LOW);
@@ -14,7 +14,7 @@ void max7219_pvn::spiTransmit(uint8_t addr, uint8_t data)
   SPI.endTransaction();
 }
 
-void max7219_pvn::init(uint8_t cs_pin)
+void max7219::init(uint8_t cs_pin)
 {
   this->cs_pin = cs_pin;
   pinMode(cs_pin,OUTPUT);
