@@ -1,4 +1,4 @@
-#include <max7219_pvn.h>
+#include <max7219.h>
 
 max7219_pvn::max7219_pvn(uint8_t CS_PIN)
 {
