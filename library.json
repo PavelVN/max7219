@@ -1,0 +1,22 @@
+{
+    "name": "max7219",
+    "version": "0.1.0",
+    "keywords": "max7219, led, segment, common cathode",
+    "description": "Library for chip max7219",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/PavelVN/max7219"
+    },
+    "authors": [
+      {
+        "name": "Pavel Nefedev",
+        "url": "https://nefedev.com/",
+        "maintainer": true,
+        "email": "pavel@nefedev.com"
+      }
+    ],
+    "exclude": [".github", "extras", "docs"],
+    "frameworks": "arduino",
+    "platforms": ["*"]
+  }
