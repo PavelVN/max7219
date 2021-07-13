@@ -28,7 +28,7 @@ public:
     max7219();
     ~max7219();
     void spiTransmit(uint8_t addr, uint8_t data);
-    void init(uint8_t cs_pin);
+    virtual void init(uint8_t cs_pin);
 };
 
 
