@@ -23,6 +23,14 @@ void max7219::spiTransmit(uint8_t addr, uint8_t data)
   SPI.endTransaction();
 }
 
+void max7219::sendDigWithoutDP(uint8_t addr, uint8_t data)
+{
+  if (addr > 0 && addr < 9)
+  {
+    spiTransmit(addr, (lastSendData[addr-1] & 0b10000000) | (data & 0b1111111));
+  }
+}
+
 void max7219::setBits(uint8_t addr, uint8_t bits)
 {
   if (addr > 0 && addr < 9)

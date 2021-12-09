@@ -32,6 +32,7 @@ public:
     void init(uint8_t cs_pin);
     void setBits(uint8_t addr, uint8_t bits);
     void clearBits(uint8_t addr, uint8_t bits);
+    void sendDigWithoutDP(uint8_t addr, uint8_t data);
 };
 
 
