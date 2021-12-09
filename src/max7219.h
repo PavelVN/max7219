@@ -24,11 +24,14 @@ class max7219
 private:
     uint8_t cs_pin;
     uint8_t activeDigits;
+    uint8_t lastSendData[8];
 public:
     max7219();
     ~max7219();
     void spiTransmit(uint8_t addr, uint8_t data);
-    virtual void init(uint8_t cs_pin);
+    void init(uint8_t cs_pin);
+    void setBits(uint8_t addr, uint8_t bits);
+    void clearBits(uint8_t addr, uint8_t bits);
 };
 
 
